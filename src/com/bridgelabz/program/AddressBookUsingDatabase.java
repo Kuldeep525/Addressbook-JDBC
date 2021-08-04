@@ -17,11 +17,11 @@ public class AddressBookUsingDatabase {
 		AddressBookUsingDatabase addressBook = new AddressBookUsingDatabase();
 		JDBC jdbcConnection  = new JDBC();	
 		Connection connection  = jdbcConnection.connection();
-	//	addressBook.showAddressBook(connection);
-	//	addressBook.updateContactDetails(connection);
-	//	addressBook.AddColumn(connection);
-	//	addressBook.showEntryInSelectedDate(connection) ;
-	//	addressBook.showDataByState(connection) ;
+		addressBook.showAddressBook(connection);
+		addressBook.updateContactDetails(connection);
+		addressBook.AddColumn(connection);
+		addressBook.showEntryInSelectedDate(connection) ;
+		addressBook.showDataByState(connection) ;
 		addressBook.insertNewContact(connection);
 	}
 
@@ -157,7 +157,6 @@ public class AddressBookUsingDatabase {
 		
 	}
 	
-
 	private void updateDate(Connection connection) {
 		System.out.println("enter the Entry date");
 		String date = sc.next();
@@ -177,9 +176,7 @@ public class AddressBookUsingDatabase {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 	
 	private void AddColumn(Connection connection) {
 		
@@ -280,10 +277,4 @@ public class AddressBookUsingDatabase {
 			e.printStackTrace();
 		}
 	}
-	
-	
- 	
-	
-	
-
 }
